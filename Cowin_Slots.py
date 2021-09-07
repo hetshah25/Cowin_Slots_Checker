@@ -1,8 +1,11 @@
 import requests
 import time
 from playsound import playsound
+from datetime import datetime , timedelta
+
 dist = 770
-date = '26-05-2021'
+date = datetime.now() + timedelta(1)
+
 URL = 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id={}&date={}'.format(
     dist, date)
 
